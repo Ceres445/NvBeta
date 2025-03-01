@@ -144,6 +144,37 @@ return {
       return require "nvchad.configs.cmp"
     end,
   },
+  {
+    "zbirenbaum/copilot.lua",
+    -- Lazy load when event occurs. Events are triggered
+    -- as mentioned in:
+    -- https://vi.stackexchange.com/a/4495/20389
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup {}
+    end,
+
+    -- You can also have it load at immediately at
+    -- startup by commenting above and uncommenting below:
+    -- lazy = false
+    opts = {
+
+      -- Possible configurable fields can be found on:
+      -- https://github.com/zbirenbaum/copilot.lua#setup-and-configuration
+      suggestion = {
+        enabled = false,
+      },
+      panel = {
+        enabled = false,
+      },
+    },
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+  },
 
   {
     "nvim-telescope/telescope.nvim",
