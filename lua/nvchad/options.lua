@@ -12,9 +12,9 @@ o.cursorlineopt = "number"
 
 -- Indenting
 o.expandtab = true
-o.shiftwidth = 2
+o.shiftwidth = 4
 o.smartindent = true
-o.tabstop = 2
+o.tabstop = 4
 o.softtabstop = 2
 
 opt.fillchars = { eob = " " }
